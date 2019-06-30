@@ -11,6 +11,7 @@ CREATE OR ALTER PROCEDURE dbo.omdb_listTables_sp
  * Version 0.73 - help from https://samirvaidya.blogspot.com/2015/11/passing-parameters-to-powershell-build.html
  * Version 0.74 - if at first you don't succeed ... debug by dumping all the variables
  * Version 0.75 - the rabbit holes are always the most fun
+ * Version 0.76 - although, I'm ready for this to be over soon, tbh
  *
  ******************************************************************************************************************/
 
