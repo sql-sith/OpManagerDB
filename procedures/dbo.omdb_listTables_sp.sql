@@ -1,11 +1,11 @@
 USE OpManagerDB;
 GO
 
-CREATE OR REPLACE PROCEDURE dbo.omdb_listTables_sp
+CREATE OR ALTER PROCEDURE dbo.omdb_listTables_sp
     @type varchar(10) -- list/detail or summary/count
 /************************************************************************
  * 
- * Version 0.60
+ * Version 0.61
  *
  */
 
@@ -14,7 +14,11 @@ AS
     IF @type = 'list' SET @type = 'detail';
     IF @type = 'count' SET @type = 'summary';
 
-    IF @type NOT IN ('detail', 'summary');
+    IF @type NOT IN ('detail', 'summary')
+	BEGIN
+		RAISERROR('%s is an invalid value for @type. Please use list, detail, count, or summary.', 16, 1);
+		RETURN -- precautionary
+	END;
 
     IF @type = 'detail'
         SELECT 
