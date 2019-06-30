@@ -23,6 +23,7 @@ CREATE OR ALTER PROCEDURE dbo.omdb_listTables_sp
  * Version 0.85 - tweak tweak grumble yawn tweak
  * Version 0.86 - now it's become the principle of the thing. can I get it debugged by v0.99?
  * Version 0.85 - forgot to, you know, actually send the error to TeamCity
+ * Version 0.86 - last one for the night; I'm tired enough for now...
  *
  ******************************************************************************************************************/
 
