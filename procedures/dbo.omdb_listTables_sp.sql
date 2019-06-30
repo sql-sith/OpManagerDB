@@ -16,12 +16,13 @@ CREATE OR ALTER PROCEDURE dbo.omdb_listTables_sp
  * Version 0.78 - things are looking up a little bit...
  * Version 0.79 - yes, this is more-or-less working now.
  * Version 0.80 - testing some SQLCMD parameter changes
+ * Version 0.81 - making this fail deliberately once on SQL syntax to test SQLCMD -b parameter
  *
  ******************************************************************************************************************/
 
 AS
 
-    IF @type = 'list' SET @type = 'detail';
+    IF @type = 'list' SET @type = 'detail' @fail = 'here';
     IF @type = 'count' SET @type = 'summary';
 
     IF @type NOT IN ('detail', 'summary')
