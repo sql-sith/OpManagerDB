@@ -5,7 +5,7 @@ CREATE OR REPLACE PROCEDURE dbo.omdb_listTables_sp
     @type varchar(10) -- list/detail or summary/count
 /************************************************************************
  * 
- * Version 0.56
+ * Version 0.60
  *
  */
 
@@ -17,7 +17,11 @@ AS
     IF @type NOT IN ('detail', 'summary');
 
     IF @type = 'detail'
-        SELECT ROW_NUMBER() AS row_number, t.object_id, t.name
+        SELECT 
+            ROW_NUMBER() OVER(ORDER BY t.object_id) AS id_rank
+            , ROW_NUMBER() OVER(ORDER BY t.name) AS name_rank
+            , t.object_id
+            , t.name
         FROM sys.tables AS t
         ORDER BY t.name;
     ELSE
