@@ -15,6 +15,7 @@ CREATE OR ALTER PROCEDURE dbo.omdb_listTables_sp
  * Version 0.77 - water. give me water! and caffeine...  
  * Version 0.78 - things are looking up a little bit...
  * Version 0.79 - yes, this is more-or-less working now.
+ * Version 0.80 - testing some SQLCMD parameter changes
  *
  ******************************************************************************************************************/
 
