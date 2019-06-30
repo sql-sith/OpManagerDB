@@ -31,7 +31,7 @@ CREATE OR ALTER PROCEDURE dbo.omdb_listTables_sp
  * Version 0.91 - totally mystified
  * Version 0.92 - wait - I think that pwsh can't catch native .EXE errors automatically. let me try this again...
  * Version 0.93 - ooh, that was close. it can run, but can it hide forever?
- * Version 0.94 - getting down to the wire here. now I'm just tweaking powershell code. 
+ * Version 0.94 - getting down to the wire here. now I'm just tweaking powershell code.
  *
  ******************************************************************************************************************/
 
