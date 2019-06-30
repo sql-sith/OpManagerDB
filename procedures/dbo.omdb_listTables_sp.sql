@@ -26,6 +26,7 @@ CREATE OR ALTER PROCEDURE dbo.omdb_listTables_sp
  * Version 0.86 - last one for the night; I'm tired enough for now...
  * Version 0.87 - maybe it will help if I actually _throw_ the caught error...
  * Version 0.88 - well lookie there ... the escape period is a vertical bar ... kind of gives me flashbacks
+ * Version 0.89 - why is it so hard to make this fail??!?
  *
  ******************************************************************************************************************/
 
