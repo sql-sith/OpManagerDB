@@ -13,6 +13,7 @@ CREATE OR ALTER PROCEDURE dbo.omdb_listTables_sp
  * Version 0.75 - the rabbit holes are always the most fun
  * Version 0.76 - although, I'm ready for this to be over soon, tbh
  * Version 0.77 - water. give me water! and caffeine...  
+ * Version 0.78 - things are looking up a little bit...
  *
  ******************************************************************************************************************/
 
