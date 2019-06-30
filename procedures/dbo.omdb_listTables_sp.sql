@@ -7,6 +7,7 @@ CREATE OR ALTER PROCEDURE dbo.omdb_listTables_sp
  * 
  * Version 0.70 - previous run was initial success with TeamCity
  * Version 0.71 - trying to get the changed files list in a real PS parameter
+ * Version 0.72 - previous attempt had error in PS deployment script
  *
  ***********************************************************************************/
 
