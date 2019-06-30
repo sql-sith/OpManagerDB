@@ -30,6 +30,7 @@ CREATE OR ALTER PROCEDURE dbo.omdb_listTables_sp
  * Version 0.90 - my v1.00 goal looks iffy. going back to the first way i tried service messages
  * Version 0.91 - totally mystified
  * Version 0.92 - wait - I think that pwsh can't catch native .EXE errors automatically. let me try this again...
+ * Version 0.93 - ooh, that was close. it can run, but can it hide forever?
  *
  ******************************************************************************************************************/
 
