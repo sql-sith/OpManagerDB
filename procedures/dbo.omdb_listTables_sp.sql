@@ -3,13 +3,14 @@ GO
 
 CREATE OR ALTER PROCEDURE dbo.omdb_listTables_sp
     @type varchar(10) -- list/detail or summary/count
-/***********************************************************************************
+/******************************************************************************************************************
  * 
  * Version 0.70 - previous run was initial success with TeamCity
  * Version 0.71 - trying to get the changed files list in a real PS parameter
  * Version 0.72 - previous attempt had error in PS deployment script
+ * Version 0.73 - help from https://samirvaidya.blogspot.com/2015/11/passing-parameters-to-powershell-build.html
  *
- ***********************************************************************************/
+ ******************************************************************************************************************/
 
 AS
 
