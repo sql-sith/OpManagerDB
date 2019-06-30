@@ -19,6 +19,7 @@ CREATE OR ALTER PROCEDURE dbo.omdb_listTables_sp
  * Version 0.81 - making this fail deliberately once on SQL syntax to test SQLCMD -b parameter
  * Version 0.82 - fiddling with error handler (v 0.81 build succeeded - oops!)
  * Version 0.83 - still trying to get adequate error checking. using teamcity service messages this time
+ * Version 0.84 - I'm glad I have an excuse to stay up late with Andrew leaving the house so early...
  *
  ******************************************************************************************************************/
 
