@@ -5,7 +5,7 @@ CREATE OR REPLACE PROCEDURE dbo.omdb_listTables_sp
     @type varchar(10) -- list/detail or summary/count
 /************************************************************************
  * 
- * Version 0.45
+ * Version 0.50
  *
  */
 
