@@ -34,12 +34,13 @@ CREATE OR ALTER PROCEDURE dbo.omdb_listTables_sp
  * Version 0.94 - getting down to the wire here. now I'm just tweaking powershell code.
  * Version 0.95 - after this one, it's off to Granite City! :)
  * Version 0.96 - back from Granite City. frustrated with the lawn guy. only three version ticks left.
+ * Version 0.97 - now, without the compile error...
  *
  ******************************************************************************************************************/
 
 AS
 
-    IF @type = 'list' SET @type = 'detail' @fail = 'here';
+    IF @type = 'list' SET @type = 'detail';
     IF @type = 'count' SET @type = 'summary';
 
     IF @type NOT IN ('detail', 'summary')
