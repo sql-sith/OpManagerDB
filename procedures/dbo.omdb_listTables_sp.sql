@@ -37,7 +37,7 @@ CREATE OR ALTER PROCEDURE dbo.omdb_listTables_sp
  * Version 0.97 - now, without the compile error... 
  * Version 0.98 - force compile fail again...
  * Version 0.99 - is it working yet?
- * Version 1.00 - it's kind of done :-) 
+ * Version 1.00 - it's kind of done :-)
  *
  ******************************************************************************************************************/
 
