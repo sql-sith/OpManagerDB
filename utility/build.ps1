@@ -57,9 +57,9 @@ foreach ($file in (Get-Content $changedFilesFile)) {
 
             # Vertical pipe is the escape character for TeamCity's service messages, so we escape those first by doubling them up.
             # Next, we escape apostrophes (using vertical pipe) so that TeamCity doesn't think they are string terminators.
-            $teamcity_errormessage = $raw_errormessage.replace('|', '||').replace("'", "|'")
-
-            Write-Host ("##teamcity[buildProblem description='{0}' identity='Failed automated MSSQL build.']" -f $teamcity_errormessage)
+            # $teamcity_errormessage = $raw_errormessage.replace('|', '||').replace("'", "|'")
+            # Write-Host ("##teamcity[buildProblem description='{0}' identity='Failed automated MSSQL build.']" -f $teamcity_errormessage)
+            Write-Host ("##teamcity[buildProblem description='{0}' identity='Failed automated MSSQL build.']" -f $raw_errormessage)
             # Write-Error ($raw_errormessage)
             
             exit 1 
