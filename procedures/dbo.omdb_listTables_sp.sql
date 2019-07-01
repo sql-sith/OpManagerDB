@@ -44,7 +44,7 @@ CREATE OR ALTER PROCEDURE dbo.omdb_listTables_sp
 AS
 
     IF @type = 'list' SET @type = 'detail';
-    IF @type = 'count' SET @type = 'summary', 'abc', 1;
+    IF @type = 'count' SET @type = 'summary';
 
     IF @type NOT IN ('detail', 'summary')
 	BEGIN
