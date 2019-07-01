@@ -28,7 +28,7 @@ foreach ($file in (Get-Content $changedFilesFile)) {
         (Write-Host "Skipping line number {0} due to apparently invalid file extension (apparent filename {1})" -f $line_number, $filename)
     }
     else {
-        $filename = $file.Split(':')[0]
+        $files_processed += 1
         Write-Host ('Processing file {0}.' -f $filename)
         
         try {
