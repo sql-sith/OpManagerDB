@@ -23,9 +23,9 @@ foreach ($file in (Get-Content $changedFilesFile)) {
         $files_skipped += 1
         Write-Host("Skipping apparently blank line (line {0})." -f $line_number)
     }
-    elseif ($file.Substring($file.LastIndexOf('.') + 1) -notin ("SQL", "PRC")) {
+    elseif ($filename.Substring($filename.LastIndexOf('.') + 1) -notin ("SQL", "PRC")) {
         $files_skipped += 1
-        (Write-Host "Skipping line number {0} due to apparently invalid file extension (apparent filename {1})" -f $line_number, $filename)
+        Write-Host ("Skipping line number {0} due to apparently invalid file extension (apparent filename {1})" -f $line_number, $filename)
     }
     else {
         $files_processed += 1
