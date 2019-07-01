@@ -10,7 +10,7 @@ Write-Host "Build step beginning."
 Write-Host "Backing up changedFiles file."
 Copy-Item $changedFilesFile ("c:\temp\" + (Split-Path -Path $changedFilesFile -Leaf) + "cf.txt")
 
-$files_processed = $files_skipped $line_number = 0
+$files_processed = $files_skipped = $line_number = 0
 
 Write-Host "Looping through changed files."
 # only read lines that are not blank and which have an .SQL extension:
