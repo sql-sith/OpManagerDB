@@ -35,13 +35,14 @@ CREATE OR ALTER PROCEDURE dbo.omdb_listTables_sp
  * Version 0.95 - after this one, it's off to Granite City! :)
  * Version 0.96 - back from Granite City. frustrated with the lawn guy. only three version ticks left.
  * Version 0.97 - now, without the compile error... 
+ * Version 0.98 - force compile fail again...
  *
  ******************************************************************************************************************/
 
 AS
 
     IF @type = 'list' SET @type = 'detail';
-    IF @type = 'count' SET @type = 'summary';
+    IF @type = 'count' SET @type = 'summary', 'abc', 1;
 
     IF @type NOT IN ('detail', 'summary')
 	BEGIN
