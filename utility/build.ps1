@@ -11,7 +11,8 @@ Write-Host "Backing up changedFiles file."
 Copy-Item $changedFilesFile ("c:\temp\" + (Split-Path -Path $changedFilesFile -Leaf) + "cf.txt")
 
 Write-Host "Looping through changed files."
-foreach ($file in (Get-Content $changedFilesFile | ? { $_ -notmatch '(?:^\s*$)' } )) {
+# only read lines that are not blank and which have an .SQL extension:
+foreach ($file in (Get-Content $changedFilesFile | ? { ($_ -notmatch '(?:^\s*$)') -and ($_.reverse().substring(0, $_.indexOf('.')).reverse() -eq "SQL") } {
     $filename = $file.Split(':')[0]
     Write-Host ('Processing file {0}.' -f $filename)
     
