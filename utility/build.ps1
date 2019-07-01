@@ -12,7 +12,7 @@ Copy-Item $changedFilesFile ("c:\temp\" + (Split-Path -Path $changedFilesFile -L
 
 Write-Host "Looping through changed files."
 # only read lines that are not blank and which have an .SQL extension:
-foreach ($file in (Get-Content $changedFilesFile | ? { ($_ -notmatch '(?:^\s*$)') -and ($_.reverse().substring(0, $_.indexOf('.')).reverse() -eq "SQL") } {
+foreach ($file in (Get-Content $changedFilesFile) | Where-Object (($_ -notmatch '(?:^\s*$)') -and ($_.reverse().substring(0, $_.indexOf('.')).reverse() -eq "SQL"))) {
     $filename = $file.Split(':')[0]
     Write-Host ('Processing file {0}.' -f $filename)
     
@@ -44,7 +44,7 @@ foreach ($file in (Get-Content $changedFilesFile | ? { ($_ -notmatch '(?:^\s*$)'
         # Next, we escape apostrophes (using vertical pipe) so that TeamCity doesn't think they are string terminators.
         $teamcity_errormessage = $raw_errormessage.replace('|', '||').replace("'", "|'")
 
-        Write-Host ("##teamcity[buildProblem description='{0}' identity='Failed automated MSSQL build.']" -f $raw_errormessage)
+        Write-Host ("##teamcity[buildProblem description='{0}' identity='Failed automated MSSQL build.']" -f $teamcity_errormessage)
         # Write-Error ($raw_errormessage)
         
         exit 1
