@@ -33,7 +33,7 @@ CREATE OR ALTER PROCEDURE dbo.omdb_listTables_sp
  * Version 0.93 - ooh, that was close. it can run, but can it hide forever?
  * Version 0.94 - getting down to the wire here. now I'm just tweaking powershell code.
  * Version 0.95 - after this one, it's off to Granite City! :)
- * Version 0.96 - back from Granite City. frustrated with the lawn guy. only three version ticks left. 
+ * Version 0.96 - back from Granite City. frustrated with the lawn guy. only three version ticks left.
  *
  ******************************************************************************************************************/
 
