@@ -67,5 +67,5 @@ foreach ($file in (Get-Content $changedFilesFile)) {
     }
 }
 
-Write-Host "Build step complete."
+Write-Host "Build step complete. Processed {0} lines from changed files list and skipped {1} lines."
 exit 0
