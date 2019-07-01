@@ -47,7 +47,7 @@ foreach ($file in (Get-Content $changedFilesFile) | Where-Object (($_ -notmatch 
         Write-Host ("##teamcity[buildProblem description='{0}' identity='Failed automated MSSQL build.']" -f $teamcity_errormessage)
         # Write-Error ($raw_errormessage)
         
-        exit 1
+        exit 1 
     }
 }
 
