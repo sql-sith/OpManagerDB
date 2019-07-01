@@ -36,7 +36,7 @@ CREATE OR ALTER PROCEDURE dbo.omdb_listTables_sp
  * Version 0.96 - back from Granite City. frustrated with the lawn guy. only three version ticks left.
  * Version 0.97 - now, without the compile error... 
  * Version 0.98 - force compile fail again...
- * Version 0.99 - is it working yet? 
+ * Version 0.99 - is it working yet?
  *
  ******************************************************************************************************************/
 
